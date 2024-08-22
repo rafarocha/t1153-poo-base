@@ -1,6 +1,6 @@
-package tech.ada.poo.base.servico;
+package tech.ada.poo.base.servico.compactar;
 
-import tech.ada.poo.base.servico.elementos.Audio;
+import tech.ada.poo.base.servico.compactar.elementos.Audio;
 
 import java.io.File;
 

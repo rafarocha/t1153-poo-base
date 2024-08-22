@@ -1,7 +1,7 @@
-package tech.ada.poo.base.servico;
+package tech.ada.poo.base.servico.compactar;
 
-import tech.ada.poo.base.servico.elementos.Audio;
-import tech.ada.poo.base.servico.elementos.Fluxo;
+import tech.ada.poo.base.servico.compactar.elementos.Audio;
+import tech.ada.poo.base.servico.compactar.elementos.Fluxo;
 
 import java.io.File;
 

@@ -1,4 +1,4 @@
-package tech.ada.poo.base.order.comparator;
+package tech.ada.poo.base.ordenador.comparator;
 
 import java.util.Collections;
 import java.util.Comparator;

@@ -1,20 +1,10 @@
 package tech.ada.poo.base.servico.biblioteca;
 
-public class BibliotecaServiceImpl implements BibliotecaService {
-    @Override public void reservar() {
-        System.out.println("reservar");
-    }
+import java.util.ArrayList;
+import java.util.List;
 
-    @Override public void emprestar() {
-        System.out.println("emprestar");
-    }
+public abstract class BibliotecaServiceImpl {
 
-    @Override public void devolver() {
-        System.out.println("devolver");
-    }
-
-    @Override public void consultar() {
-        System.out.println("consultar");
-    }
+    List<ItemCatalogo> itens = new ArrayList<ItemCatalogo>();
 
 }

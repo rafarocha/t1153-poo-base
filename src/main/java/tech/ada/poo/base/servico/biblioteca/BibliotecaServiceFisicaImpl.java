@@ -14,9 +14,8 @@ public class BibliotecaServiceFisicaImpl
     }
 
     @Override
-    public boolean consultar() {
-        System.out.println("consultar");
-        return false;
+    public boolean consultar(String titulo) {
+        return super.consultar(titulo);
     }
 
     @Override

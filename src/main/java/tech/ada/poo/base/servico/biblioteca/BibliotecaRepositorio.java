@@ -4,5 +4,5 @@ public interface BibliotecaRepositorio {
 
     void cadastrar(ItemCatalogo item);
 
-    boolean consultar(ItemCatalogo item);
+    boolean consultar(String titulo);
 }

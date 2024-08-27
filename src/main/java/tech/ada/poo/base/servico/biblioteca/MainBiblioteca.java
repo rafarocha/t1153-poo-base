@@ -11,6 +11,10 @@ public class MainBiblioteca {
         BibliotecaServiceFisica bibServiceFisica = new BibliotecaServiceFisicaImpl(repositorio);
         bibServiceFisica.cadastrar( livroabc );
 
+        boolean r1 = bibServiceFisica.consultar( "livro abs" );
+        boolean r2 = bibServiceFisica.consultar( "livro abc" );
+        System.out.println(r1 + " "+ r2);
+
         BibliotecaServiceVirtual bibServiceVirtual = new BibliotecaServiceVirtualImpl();
         bibServiceVirtual.reservar();
 

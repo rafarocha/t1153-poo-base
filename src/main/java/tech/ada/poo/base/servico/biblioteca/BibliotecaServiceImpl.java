@@ -11,8 +11,8 @@ public abstract class BibliotecaServiceImpl {
         this.repositorio = repositorio;
     }
 
-    public boolean consultar(ItemCatalogo item) {
-        return repositorio.consultar(item);
+    public boolean consultar(String titulo) {
+        return repositorio.consultar(titulo);
     }
 
 }

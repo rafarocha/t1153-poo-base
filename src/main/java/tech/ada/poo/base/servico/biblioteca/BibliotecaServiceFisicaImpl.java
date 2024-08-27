@@ -4,10 +4,8 @@ public class BibliotecaServiceFisicaImpl
     extends BibliotecaServiceImpl
         implements BibliotecaServiceFisica {
 
-    private BibliotecaRepositorio repositorio;
-
     public BibliotecaServiceFisicaImpl(BibliotecaRepositorio repositorio) {
-        this.repositorio = repositorio;
+        super.setRepositorio(repositorio);
     }
 
     @Override
@@ -32,7 +30,7 @@ public class BibliotecaServiceFisicaImpl
 
     @Override
     public void cadastrar(ItemCatalogo item) {
-        this.repositorio.cadastrar(item);
+        super.repositorio.cadastrar(item);
         System.out.println( "item " + item +  " cadastrado!" );
     }
 

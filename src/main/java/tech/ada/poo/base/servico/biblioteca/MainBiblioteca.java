@@ -6,7 +6,6 @@ public class MainBiblioteca {
 
         ItemCatalogo livroabc = new Livro("livro abc");
 
-
         BibliotecaRepositorio repositorio = new BibliotecaRepositorioListImpl();
 
         BibliotecaServiceFisica bibServiceFisica = new BibliotecaServiceFisicaImpl(repositorio);

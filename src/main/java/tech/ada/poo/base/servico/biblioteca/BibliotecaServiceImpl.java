@@ -5,6 +5,9 @@ import java.util.List;
 
 public abstract class BibliotecaServiceImpl {
 
-    List<ItemCatalogo> itens = new ArrayList<ItemCatalogo>();
+    protected BibliotecaRepositorio repositorio;
 
+    public void setRepositorio(BibliotecaRepositorio repositorio) {
+        this.repositorio = repositorio;
+    }
 }

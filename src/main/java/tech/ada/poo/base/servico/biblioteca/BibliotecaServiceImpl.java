@@ -5,9 +5,14 @@ import java.util.List;
 
 public abstract class BibliotecaServiceImpl {
 
-    protected BibliotecaRepositorio repositorio;
+    protected BibliotecaRepositorio repositorio; // interface tá?
 
     public void setRepositorio(BibliotecaRepositorio repositorio) {
         this.repositorio = repositorio;
     }
+
+    public boolean consultar(ItemCatalogo item) {
+        return repositorio.consultar(item);
+    }
+
 }

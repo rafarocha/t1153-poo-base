@@ -12,4 +12,13 @@ public class BibliotecaRepositorioListImpl implements BibliotecaRepositorio {
         itens.add(item);
     }
 
+    @Override
+    public boolean consultar(ItemCatalogo item) {
+        if (this.itens == null || itens.isEmpty()) return false;
+        for () {
+
+        }
+    }
+
+
 }

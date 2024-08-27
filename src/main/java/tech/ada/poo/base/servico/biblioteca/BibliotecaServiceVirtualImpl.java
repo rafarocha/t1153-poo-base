@@ -10,8 +10,8 @@ public class BibliotecaServiceVirtualImpl
     }
 
     @Override
-    public void consultar() {
-
+    public boolean consultar() {
+        return false;
     }
-    
+
 }

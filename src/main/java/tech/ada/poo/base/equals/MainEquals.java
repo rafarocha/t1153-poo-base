@@ -44,6 +44,11 @@ public class MainEquals {
         System.out.println( iguais6 );
         // sugestao use nomes de variaveis adequados
 
+        // em resumo
+        // nao colocar logica da casa fora dela (no main)
+        // isso se refere a regra de igualidade
+        // que aprendemos sobre equals
+
     }
 
 }

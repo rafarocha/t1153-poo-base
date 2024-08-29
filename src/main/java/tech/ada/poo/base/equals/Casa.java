@@ -53,4 +53,9 @@ public class Casa {
 
     // TODO hashcode
 
+
+    @Override
+    public String toString() {
+        return this.numero + " " + this.complemento;
+    }
 }

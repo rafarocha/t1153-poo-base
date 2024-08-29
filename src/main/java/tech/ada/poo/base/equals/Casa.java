@@ -34,7 +34,9 @@ public class Casa {
 
     @Override
     public boolean equals(Object obj) {
+        // verificar o objeto que se recebe
         if (obj == null || !(obj instanceof Casa) ) return false;
+        // verificar os atributos identificaveis
         if (this.numero == null || this.complemento == null) return false;
 
         // fazer casting
@@ -44,10 +46,8 @@ public class Casa {
         boolean r1 = (
             this.getNumero().equals(casa.getNumero())
         );
-        boolean r2 = (this.getComplemento().equals(
-            casa.getComplemento())
+        boolean r2 = (this.getComplemento().equals(casa.getComplemento())
         );
-        System.out.println("debug");
         return (r1 && r2); // tautologia = true
     }
 

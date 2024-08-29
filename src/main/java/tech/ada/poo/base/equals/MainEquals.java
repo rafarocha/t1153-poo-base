@@ -41,9 +41,8 @@ public class MainEquals {
         Casa c4 = new Casa("987", 1);
         Casa c5 = new Casa("987", 1);
         boolean iguais6 = (c4.equals(c5));
-        System.out.println( iguais5 );
-
-
+        System.out.println( iguais6 );
+        // sugestao use nomes de variaveis adequados
 
     }
 

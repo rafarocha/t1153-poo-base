@@ -1,6 +1,6 @@
 package tech.ada.poo.base.equals;
 
-public class Casa {
+public class Casa implements Comparable<Casa> {
 
     private String numero;
 
@@ -57,5 +57,18 @@ public class Casa {
     @Override
     public String toString() {
         return this.numero + " " + this.complemento;
+    }
+
+    @Override
+    public int compareTo(Casa item) {
+        int comparaNumero = this.numero
+            .compareTo(item.getNumero());
+
+        if (comparaNumero == 0 ) {
+            return this.getComplemento()
+                .compareTo(item.getComplemento());
+        }
+
+        return comparaNumero;
     }
 }

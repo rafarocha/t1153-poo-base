@@ -51,25 +51,33 @@ public class MainComparator {
         System.out.println( Arrays.toString( casas.toArray()) );
 
         // comparator -> bastante usado em camadas de servico/negocio e regras
-//        Collections.sort(casas,
-//            new Comparator<Casa>() {
-//                @Override
-//                public int compare(Casa esquerda, Casa direita) {
-//                    // todos tipos wrappers possuem impl propria do compareTo
-//                    int comparaNumero = esquerda.getNumero().compareTo( direita.getNumero() );
-//
-//                    if ( comparaNumero == 0) {
-//                        return esquerda.getComplemento().compareTo(direita.getComplemento());
-//                    }
-//                    return comparaNumero;
-//                }
-//            }
-//        );
+        Collections.sort(casas,
+            new Comparator<Casa>() {
+                @Override
+                public int compare(Casa esquerda, Casa direita) {
+                    // todos tipos wrappers possuem impl propria do compareTo
+                    int comparaNumero = esquerda.getNumero().compareTo( direita.getNumero() );
 
-        // Comparator<Casa> comparador = new ComparatorCasa<Casa>().
+                    if ( comparaNumero == 0) {
+                        return esquerda.getComplemento().compareTo(direita.getComplemento());
+                    }
+                    return comparaNumero;
+                }
+            }
+        );
+
+        Comparator<Casa> comparador = new ComparatorCasa();
         Collections.sort(casas, comparador);
 
         System.out.println( Arrays.toString( casas.toArray()) );
+
+        System.out.println( "--casa sem comparator" );
+        List<Casa> casas2 = new ArrayList<Casa>();
+        casas2.add( new Casa("xef", 2 ));
+        casas2.add( new Casa("fed", 3 ));
+        casas2.add( new Casa("ded", 1 ));
+        Collections.sort(casas2);
+        System.out.println( Arrays.toString( casas2.toArray()) );
     }
 
 }

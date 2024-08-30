@@ -36,7 +36,11 @@ public class MainComparator {
                         return 0;
                 }
             });
+
+        Collections.sort(numeros);
         System.out.println( Arrays.toString( numeros.toArray() ) );
+
+
 
         // -----
         // criterio de comparacao é: ordem do numero + complemento
@@ -46,23 +50,26 @@ public class MainComparator {
         casas.add( new Casa("cba", 1 ));
         System.out.println( Arrays.toString( casas.toArray()) );
 
-        Collections.sort(casas,
-            new Comparator<Casa>() {
-                @Override
-                public int compare(Casa esquerda, Casa direita) {
-                    // todos tipos wrappers possuem impl propria do compareTo
-                    int comparaNumero = esquerda.getNumero().compareTo( direita.getNumero() );
+        // comparator -> bastante usado em camadas de servico/negocio e regras
+//        Collections.sort(casas,
+//            new Comparator<Casa>() {
+//                @Override
+//                public int compare(Casa esquerda, Casa direita) {
+//                    // todos tipos wrappers possuem impl propria do compareTo
+//                    int comparaNumero = esquerda.getNumero().compareTo( direita.getNumero() );
+//
+//                    if ( comparaNumero == 0) {
+//                        return esquerda.getComplemento().compareTo(direita.getComplemento());
+//                    }
+//                    return comparaNumero;
+//                }
+//            }
+//        );
 
-                    if ( comparaNumero == 0) {
-                        return esquerda.getComplemento().compareTo(direita.getComplemento());
-                    }
-                    return comparaNumero;
-                }
-            }
-        );
+        // Comparator<Casa> comparador = new ComparatorCasa<Casa>().
+        Collections.sort(casas, comparador);
 
         System.out.println( Arrays.toString( casas.toArray()) );
-
     }
 
 }

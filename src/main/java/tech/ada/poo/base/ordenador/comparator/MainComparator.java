@@ -78,6 +78,24 @@ public class MainComparator {
         casas2.add( new Casa("ded", 1 ));
         Collections.sort(casas2);
         System.out.println( Arrays.toString( casas2.toArray()) );
+
+        // atividade para agora!!!
+
+        // impl class aluno e nota
+        // criar a classe aluno com nome e nota
+        // classe aluno - nome e nota
+
+        // etapa 1
+        // ordenacao padrao - por nota e depois por nome
+        // impl comparable em aluno
+
+        // etapa 2
+        // ordernar por nome e depois nota
+        // impl comparator criando uma nova classe
+
+        // etapa 3
+        // impl em ordem reversa no comparator
+
     }
 
 }

@@ -8,10 +8,12 @@ public class ComparatorCasa implements Comparator<Casa> {
 
     @Override
     public int compare(Casa esquerda, Casa direita) {
-        int comparaNumero = esquerda.getNumero().compareTo( direita.getNumero() );
+        int comparaNumero = esquerda.getNumero()
+            .compareTo( direita.getNumero() );
 
         if ( comparaNumero == 0) {
-            return esquerda.getComplemento().compareTo(direita.getComplemento());
+            return esquerda.getComplemento()
+                .compareTo(direita.getComplemento());
         }
         return comparaNumero;
     }

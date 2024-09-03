@@ -27,16 +27,26 @@ public class MainMarketplace {
 //        produtoServico.cadastrar(tomate); // lanca erro dado invalido
 
         // etapa 3 listar
+        ProdutoView view = new ProdutoView();
         List<Produto> produtos = produtoServico.listar();
-        System.out.println( Arrays.toString(produtos.toArray()) );
+        view.setProdutos( produtos );
+        view.listarProdutos();
 
         // etapa 4 excluir
         Produto biscoito2 = new Produto("Cream Cracker", 3d);
         biscoito2.setId(1L);
         produtoServico.excluir(biscoito2);
-        System.out.println( Arrays.toString(produtos.toArray()) );
+        view.listarProdutos();
 
+        // MVC
+        // Repositorio -> Servico -> Main (simplificando aqui)
+        view.listarProdutos();
 
+        // controller
+        // Repositorio -> Servico -> Controller (View) -> Main
+
+        // para proxima aula 07
+        // cadastrar, excluir e listar de no minimo 1 unica entidade
     }
 
 }

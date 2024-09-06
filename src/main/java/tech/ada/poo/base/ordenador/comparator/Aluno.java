@@ -1,13 +1,25 @@
 package tech.ada.poo.base.ordenador.comparator;
 
+import jdk.jshell.spi.ExecutionControl;
+
 public class Aluno implements Comparable<Aluno> {
 
     private String nome;
     private Double nota;
 
+    private String email;
+
+    private String telefone;
+
     public Aluno(String nome, Double nota) {
         this.nome = nome;
         this.nota = nota;
+    }
+
+    public Aluno(String nome, Double nota, String email, String telefone) {
+        this(nome, nota);
+        this.email = email;
+        this.telefone = telefone;
     }
 
     public String getNome() {
@@ -18,6 +30,13 @@ public class Aluno implements Comparable<Aluno> {
         return nota;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
 
     @Override
     public int compareTo(Aluno aluno) { // estou recebendo - parametro aluno

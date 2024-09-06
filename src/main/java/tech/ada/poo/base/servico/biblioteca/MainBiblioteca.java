@@ -4,6 +4,7 @@ import tech.ada.poo.base.servico.biblioteca.model.ItemCatalogo;
 import tech.ada.poo.base.servico.biblioteca.model.Livro;
 import tech.ada.poo.base.servico.biblioteca.repository.BibliotecaRepositorio;
 import tech.ada.poo.base.servico.biblioteca.repository.BibliotecaRepositorioListImpl;
+import tech.ada.poo.base.servico.biblioteca.repository.BibliotecaRepositorioMapImpl;
 import tech.ada.poo.base.servico.biblioteca.service.BibliotecaServiceFisica;
 import tech.ada.poo.base.servico.biblioteca.service.BibliotecaServiceFisicaImpl;
 import tech.ada.poo.base.servico.biblioteca.service.BibliotecaServiceVirtual;
@@ -14,9 +15,11 @@ public class MainBiblioteca {
     public static void main(String[] args) {
 
         // instanciando interfaces de servico e injetando repositorio nelas
-        BibliotecaRepositorio repositorio = new BibliotecaRepositorioListImpl();
-        BibliotecaServiceFisica bibServiceFisica = new BibliotecaServiceFisicaImpl(repositorio);
-        BibliotecaServiceVirtual bibServiceVirtual = new BibliotecaServiceVirtualImpl(repositorio);
+        BibliotecaRepositorio repositorioList = new BibliotecaRepositorioListImpl();
+        BibliotecaRepositorio repositorioMap = new BibliotecaRepositorioMapImpl(); // falta impl!
+
+        BibliotecaServiceFisica bibServiceFisica = new BibliotecaServiceFisicaImpl(repositorioList);
+        BibliotecaServiceVirtual bibServiceVirtual = new BibliotecaServiceVirtualImpl(repositorioList);
 
         // livros
         ItemCatalogo labc = new Livro("livro abc");

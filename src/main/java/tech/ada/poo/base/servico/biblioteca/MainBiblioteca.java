@@ -41,4 +41,22 @@ public class MainBiblioteca {
 
     }
 
+    abstract class Maquina {
+        void ligar() {
+            throw new RuntimeException("vc precisa ligar uma maquina de verdade");
+        }
+    }
+    class Geladeira extends Maquina {
+        void ligar() {
+            // ok
+        }
+        void ligar(String pin) { // sobrecarga
+            // ok
+        }
+
+        int[] x = new int[] {1,2};
+        int[] y = new int[5];
+        Integer[] z = new Integer[5];
+    }
+
 }

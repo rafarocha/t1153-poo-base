@@ -1,10 +1,12 @@
+package tech.ada.poo.base.hackathon;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class Main {
+public class MainRogerio {
 
-    public void main(String[] args) {
-        System.out.println( data("09/09/2024") );
+    public static void main(String[] args) {
+        System.out.println( data("99/09/2024") );
     }
 
     public static boolean data(String data) {
